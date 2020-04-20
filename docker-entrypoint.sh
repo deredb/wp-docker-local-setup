@@ -1,5 +1,5 @@
 #!/bin/bash
-#This code is from official Wordpress docker image repo
+#This code is from official Wordpress docker image repo, no change made
 #https://github.com/docker-library/wordpress/blob/bf85cc7bf33afbbfadd86ba79b3d8ad325289057/php7.2/apache/docker-entrypoint.sh
 set -euo pipefail
 

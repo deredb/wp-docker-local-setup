@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# credit: https://denibertovic.com/posts/handling-permissions-with-docker-volumes/
+# credit: https://github.com/docker-library/wordpress/issues/130#issuecomment-190829172
 sed -i -e 's/^exec "$@"/#exec "$@"/g' /usr/local/bin/docker-entrypoint.sh
 source /usr/local/bin/docker-entrypoint.sh
 

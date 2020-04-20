@@ -2,6 +2,7 @@
 FROM wordpress
 ENV GOSU_VERSION 1.11
 COPY entrypoint-base.sh /usr/local/bin/
+# credit https://github.com/tianon/gosu/blob/master/INSTALL.md
 RUN set -eux; \
 # save list of currently installed packages for later so we can clean up
 	savedAptMark="$(apt-mark showmanual)"; \
@@ -40,7 +41,3 @@ RUN set -eux; \
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint-base.sh" ]
 CMD ["apache2-foreground"]
-#no need for entrypoint and cmd , but in case specified override base image 
-#ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-#CMD ["apache2-foreground"]
-#CMD /usr/local/bin/entrypoint-base.sh
